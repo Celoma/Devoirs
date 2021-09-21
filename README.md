@@ -33,4 +33,4 @@ def lancers(N):
 
 ![Ma description](https://rocketleague.media.zestyio.com/rl_season_4_key_art_16_9_no_logos.jpg?optimize=high)
 
-<img src="https://rocketleague.media.zestyio.com/rl_season_4_key_art_16_9_no_logos.jpg?optimize=high width=100% alt="ma description" />
+<img src="https://rocketleague.media.zestyio.com/rl_season_4_key_art_16_9_no_logos.jpg?optimize=high" width=100% alt="ma description" />
