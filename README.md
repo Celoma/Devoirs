@@ -27,7 +27,7 @@ def lancers(N):
 
 ## Mon site favori
 
-[Mon super site](https://www.rocketleague.com/fr/)
+[Mon super site](https://mybinder.org/v2/gh/cobacdavid/nb/d0a737a0044d6afb81e31876dd47ea01bdc562d0?urlpath=lab%2Ftree%2FUntitled.ipynb)
 
 ## Une image du site 
 
