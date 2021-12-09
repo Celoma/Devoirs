@@ -1,0 +1,58 @@
+class Pile:
+    def __init__(self):
+        self.pile = []
+    
+    def __len__(self):
+        return len(self.pile)
+    
+    def sommet(self):
+        if len(self) > 0:
+            return self.pile[0]
+    
+    def __str__(self):
+        return ">" + str(self.pile)[1:]
+    
+    def empiler(self, element):
+        self.pile = [element] + self.pile
+    
+    def depiler(self):
+        if len(self) > 0:
+            return self.pile.pop(0)
+    
+class RPN:
+    
+    def __init__(self, calcul):
+        self._pile = Pile()
+        self._calcul = calcul.split()
+        self._analyse()
+    
+    def __str__(self):
+        return str(self._pile)
+    
+    def _addition(self):
+        self._pile.empiler(self._pile.depiler() + self._pile.depiler())
+    
+    def _soustraction(self):
+        self._pile.empiler(- self._pile.depiler() + self._pile.depiler())
+    
+    def _multiplication(self):
+        self._pile.empiler(self._pile.depiler() * self._pile.depiler())
+    
+    def _division(self):
+        self._pile.empiler(1 / self._pile.depiler() * self._pile.depiler())
+
+    
+    def _analyse(self):
+        for car in self._calcul:
+            if car == "+":
+                self._addition()
+            elif car == "-":
+                self._soustraction()
+            elif car == "*":
+                self._multiplication()
+            elif car == "/":
+                self._division()
+            else:
+                self._pile.empiler(float(car))
+                
+                
